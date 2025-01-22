@@ -19,24 +19,87 @@
 </head>
 <body>
   <header>
-    <h1>Добро пожаловать!</h1>
+    <h1>Добро пожаловать на сайт!</h1>
     <p>Пример красивого сайта с кнопками и отслеживанием событий</p>
   </header>
   
   <main>
     <section class="content">
-      <button class="pretty-button" id="btnOne">Кнопка 1</button>
-      <button class="pretty-button" id="btnTwo">Кнопка 2</button>
-      <button class="pretty-button" id="btnThree">Кнопка 3</button>
-      <button class="pretty-button" id="btnFour">Кнопка 4</button>
+      <h2>Секция кнопок</h2>
+      <div class="button-group">
+        <button class="pretty-button" id="btnOne">Кнопка 1</button>
+        <button class="pretty-button" id="btnTwo">Кнопка 2</button>
+        <button class="pretty-button" id="btnThree">Кнопка 3</button>
+        <button class="pretty-button" id="btnFour">Кнопка 4</button>
+        <button class="pretty-button" id="btnFive">Кнопка 5</button>
+        <button class="pretty-button" id="btnSix">Кнопка 6</button>
+        <button class="pretty-button" id="btnSeven">Кнопка 7</button>
+        <button class="pretty-button" id="btnEight">Кнопка 8</button>
+      </div>
+    </section>
+    <section class="content" id="section-2">
+      <h2>Секция из кнопок 2</h2>
+      <div class="button-group">
+        <button class="pretty-button" id="btnOne-2">Кнопка 21</button>
+        <button class="pretty-button" id="btnTwo-2">Кнопка 22</button>
+        <button class="pretty-button" id="btnThree-2">Кнопка 23</button>
+        <button class="pretty-button" id="btnFour-2">Кнопка 24</button>
+        <button class="pretty-button" id="btnFive-2">Кнопка 25</button>
+        <button class="pretty-button" id="btnSix-2">Кнопка 26</button>
+        <button class="pretty-button" id="btnSeven-2">Кнопка 27</button>
+        <button class="pretty-button" id="btnEight-2">Кнопка 28</button>
+      </div>
+    </section>
+    
+    <section class="info">
+      <h2>Полезная информация</h2>
+      <p>Этот сайт для тестирования аналитики. Жми кнопки, чтобы увидеть, как события фиксируются в Google.</p>
+      <p>Кроме кнопок, можно добавить тестовые данные через форму ниже.</p>
+    </section>
+    
+    <section class="form-section">
+      <h2>Форма обратной связи</h2>
+      <form id="feedbackForm">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit" id="formSubmit">Отправить</button>
+      </form>
     </section>
   </main>
   
   <footer>
-    <p>&copy; 2025 Красивый сайт</p>
+    <p>&copy; 2025 Красивый сайт. Все права защищены.</p>
   </footer>
   
   <!-- Подключение основного скрипта -->
-  <script src="scripts/main.js"></script>
+  <script>
+    // Отслеживание кликов по кнопкам
+    document.querySelectorAll('.pretty-button').forEach(button => {
+      button.addEventListener('click', event => {
+        gtag('event', 'button_click', {
+          event_category: 'Buttons',
+          event_label: event.target.innerText,
+          value: 1
+        });
+        alert(`Клик по кнопке: ${event.target.innerText}`);
+      });
+    });
+
+    // Отслеживание отправки формы
+    document.getElementById('feedbackForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      gtag('event', 'form_submit', {
+        event_category: 'Forms',
+        event_label: 'Feedback Form',
+        value: 1
+      });
+      alert(`Спасибо за сообщение, ${name}!`);
+    });
+  </script>
 </body>
 </html>
