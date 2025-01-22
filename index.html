@@ -16,11 +16,96 @@
     gtag('js', new Date());
     gtag('config', 'G-P9FZ71SZJF');
   </script>
+  <style>
+    /* Базовые стили */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #6c5ce7;
+      color: white;
+      text-align: center;
+      padding: 1.5em 0;
+    }
+    h1, h2 {
+      margin: 0.5em 0;
+    }
+    p {
+      margin: 0.5em 0 1.5em;
+    }
+    main {
+      padding: 2em;
+      flex-direction: column;
+      align-items: center;
+    }
+    .content, .form-section, .info {
+      margin-bottom: 2em;
+      max-width: 900px;
+    }
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pretty-button {
+      padding: 10px 20px;
+      border: none;
+      background: #0984e3;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .pretty-button:hover {
+      background: #74b9ff;
+    }
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    input, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    input:focus, textarea:focus {
+      border-color: #6c5ce7;
+    }
+    footer {
+      text-align: center;
+      padding: 1em 0;
+      background: #2d3436;
+      color: white;
+    }
+    .image-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1em;
+    }
+    .image-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Добро пожаловать на сайт!</h1>
-    <p>Пример красивого сайта с кнопками и отслеживанием событий</p>
+    <p>Пример красивого сайта с кнопками, текстом и изображениями</p>
   </header>
   
   <main>
@@ -31,12 +116,35 @@
         <button class="pretty-button" id="btnTwo">Кнопка 2</button>
         <button class="pretty-button" id="btnThree">Кнопка 3</button>
         <button class="pretty-button" id="btnFour">Кнопка 4</button>
-        <button class="pretty-button" id="btnFive">Кнопка 5</button>
-        <button class="pretty-button" id="btnSix">Кнопка 6</button>
-        <button class="pretty-button" id="btnSeven">Кнопка 7</button>
-        <button class="pretty-button" id="btnEight">Кнопка 8</button>
       </div>
     </section>
+    
+    <section class="info">
+      <h2>Полезная информация</h2>
+      <p>Этот сайт для тестирования аналитики. Жми кнопки, чтобы увидеть, как события фиксируются в Google.</p>
+      <p>Кроме кнопок, можно добавить тестовые данные через форму ниже.</p>
+    </section>
+    
+    <section class="info">
+      <h2>Текст-рыба</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu. Nullam dapibus nisl vel orci consectetur, non convallis risus tincidunt. Fusce vel facilisis lectus. Curabitur euismod justo vel nulla malesuada, at volutpat augue hendrerit.
+      </p>
+      <p>
+        Vivamus ac augue vel risus auctor gravida in sit amet nisl. Integer posuere, odio nec cursus pharetra, risus odio malesuada ligula, et lacinia ex turpis ac nisi. Sed nec nisi a nulla consequat interdum.
+      </p>
+    </section>
+    
+    <section class="image-gallery">
+      <h2>Галерея изображений</h2>
+      <div class="image-container">
+        <img src="https://cdn.pixabay.com/photo/2024/12/15/10/40/australian-pelican-9268481_1280.jpg" alt="Пример изображения 1">
+        <img src="https://cdn.pixabay.com/photo/2024/12/15/10/40/australian-pelican-9268481_1280.jpg" alt="Пример изображения 2">
+        <img src="https://cdn.pixabay.com/photo/2024/12/15/10/40/australian-pelican-9268481_1280.jpg" alt="Пример изображения 3">
+        <img src="https://cdn.pixabay.com/photo/2024/12/15/10/40/australian-pelican-9268481_1280.jpg" alt="Пример изображения 4">
+      </div>
+    </section>
+
     <section class="content" id="section-2">
       <h2>Секция из кнопок 2</h2>
       <div class="button-group">
@@ -49,12 +157,6 @@
         <button class="pretty-button" id="btnSeven-2">Кнопка 27</button>
         <button class="pretty-button" id="btnEight-2">Кнопка 28</button>
       </div>
-    </section>
-    
-    <section class="info">
-      <h2>Полезная информация</h2>
-      <p>Этот сайт для тестирования аналитики. Жми кнопки, чтобы увидеть, как события фиксируются в Google.</p>
-      <p>Кроме кнопок, можно добавить тестовые данные через форму ниже.</p>
     </section>
     
     <section class="form-section">
@@ -75,7 +177,6 @@
     <p>&copy; 2025 Красивый сайт. Все права защищены.</p>
   </footer>
   
-  <!-- Подключение основного скрипта -->
   <script>
     // Отслеживание кликов по кнопкам
     document.querySelectorAll('.pretty-button').forEach(button => {
@@ -85,7 +186,6 @@
           event_label: event.target.innerText,
           value: 1
         });
-        alert(`Клик по кнопке: ${event.target.innerText}`);
       });
     });
 
@@ -98,7 +198,6 @@
         event_label: 'Feedback Form',
         value: 1
       });
-      alert(`Спасибо за сообщение, ${name}!`);
     });
   </script>
 </body>
