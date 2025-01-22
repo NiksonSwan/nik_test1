@@ -1,17 +1,40 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.trackable-button');
-    
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            const buttonName = `Кнопка ${index + 1}`;
-            console.log(`Нажата ${buttonName}`); // Для отладки в консоли
-
-            // Отправка события в Google Analytics
-            gtag('event', 'click', {
-                event_category: 'Кнопки',
-                event_label: buttonName,
-                value: index + 1
-            });
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    const btnOne = document.getElementById("btnOne");
+    const btnTwo = document.getElementById("btnTwo");
+    const btnThree = document.getElementById("btnThree");
+    const btnFour = document.getElementById("btnFour");
+  
+    // Пример отправки события в Google Analytics при клике
+    btnOne.addEventListener("click", () => {
+      gtag('event', 'click_button', {
+        'event_category': 'Interaction',
+        'event_label': 'Button 1'
+      });
+      alert("Нажата Кнопка 1");
     });
-});
+  
+    btnTwo.addEventListener("click", () => {
+      gtag('event', 'click_button', {
+        'event_category': 'Interaction',
+        'event_label': 'Button 2'
+      });
+      alert("Нажата Кнопка 2");
+    });
+  
+    btnThree.addEventListener("click", () => {
+      gtag('event', 'click_button', {
+        'event_category': 'Interaction',
+        'event_label': 'Button 3'
+      });
+      alert("Нажата Кнопка 3");
+    });
+  
+    btnFour.addEventListener("click", () => {
+      gtag('event', 'click_button', {
+        'event_category': 'Interaction',
+        'event_label': 'Button 4'
+      });
+      alert("Нажата Кнопка 4");
+    });
+  });
+  
