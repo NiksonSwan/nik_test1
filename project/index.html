@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивное отслеживание событий</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9FZ71SZJF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P9FZ71SZJF');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Интерактивное отслеживание событий</h1>
+        <p>Нажмите на кнопки ниже, чтобы отправить события в Google Analytics.</p>
+    </header>
+    <main>
+        <section class="button-container">
+            <button id="btn1" class="trackable-button">Кнопка 1</button>
+            <button id="btn2" class="trackable-button">Кнопка 2</button>
+            <button id="btn3" class="trackable-button">Кнопка 3</button>
+            <button id="btn4" class="trackable-button">Кнопка 4</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Интерактивное отслеживание событий</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

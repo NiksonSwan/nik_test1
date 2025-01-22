@@ -1,0 +1,17 @@
+{
+    "companies": [
+        { "name": "Auto.ru", "website": "https://auto.ru" },
+        { "name": "Drom.ru", "website": "https://drom.ru" },
+        { "name": "CarPrice", "website": "https://carprice.ru" }
+    ],
+    "frequencies": [
+        { "query": "Купить авто в Москве", "count": 38147 },
+        { "query": "Подержанные автомобили в России", "count": 1224 },
+        { "query": "Авито авто", "count": 905890 }
+    ],
+    "ratings": [
+        { "company": "Auto.ru", "positive": 24837, "negative": 5123 },
+        { "company": "Drom.ru", "positive": 17954, "negative": 3289 },
+        { "company": "CarPrice", "positive": 12638, "negative": 4216 }
+    ]
+}
